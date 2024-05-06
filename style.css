@@ -1,0 +1,56 @@
+:root {
+  --blue: #4E5BEE;
+  --red: #FF5757;
+  --gray: #F8F8F8;
+};
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100dvh;
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo{
+  max-width: 100px;
+}
+
+
+.leftSection {
+  background-color: var(--blue);
+
+}
+
+.rightSection{
+
+}
+
+.rightImage{
+  max-width: 800px;
+}
