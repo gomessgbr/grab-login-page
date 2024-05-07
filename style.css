@@ -31,26 +31,86 @@ time, mark, audio, video {
 }
 
 main {
-  width: 100dvh;
-  height: 100dvh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100vh;
+  display: flex;
 }
 
-.logo{
-  max-width: 100px;
-}
 
 
 .leftSection {
   background-color: var(--blue);
-
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 90px;
 }
 
-.rightSection{
 
+
+.logo{
+  max-width: 150px;
+}
+
+.formSignUp{
+  display: grid;
+  gap: 15px;
+}
+.labelInput{
+  border: 2px solid var(--gray);
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: flex;
+  gap: 5px;
+  cursor: text;
+  min-width: 300px;
+
+}
+.signInButton{
+  background-color: var(--gray);
+  cursor: pointer;
+  padding: 0.8em 0.8em;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  margin-top: 8px;
+}
+.inputText{
+  all: unset;
+  flex: 1;
+  font-size : 16px;
+  color: #fff;
+}
+
+.bottomLeftSection{
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 30px;
+  display: grid;
+  place-items: center;
+}
+
+.bottomLeftSection > p{
+  color: #fff;
+}
+
+.bottomLeftSection > a{
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.rightSection{
+  width: min-content;
 }
 
 .rightImage{
-  max-width: 800px;
+  /* max-width: 800px; */
+}
+
+@media only screen and (max-width: 768px) {
+  .rightSection {
+    display: none;
+  }
 }
