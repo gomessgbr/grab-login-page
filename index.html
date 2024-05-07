@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    
     <title>Grab - Login</title>
   </head>
   <body>
@@ -16,16 +16,16 @@
         <div class="logoArea">
           <img src="./assets//logo-grab.svg" alt="logo"  class="logo">
         </div>
-        <form action="" class="formSignUp">
-          <label for="signEmail" class="labelInput">
-            <img src="./assets/Subtract.svg" alt="" width="20" height="20">
-            <input type="text" name="email" id="signEmail" class="inputText email">
+        <form class="formSignUp" id="signInForm">
+          <label for="signEmail" class="labelInput" id="labelSignEmail">
+            <img src="./assets/Subtract.svg" alt="" width="20" height="20" id="imageSignEmail">
+            <input type="email" name="email" id="signEmail" class="inputText email" pattern=".*@.*\..*" required>
           </label>
-          <label for="signPswd" class="labelInput">
-            <img src="./assets/lock_24px.svg" alt="" width="20" height="20">
-            <input type="password" name="password" id="signPswd" class="inputText psswd">
+          <label for="signPswd" class="labelInput" id="labelSignPassword">
+            <img src="./assets/lock_24px.svg" alt="" width="20" height="20" id="imageSignPassword">
+            <input type="password" name="password" id="signPswd" class="inputText psswd" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" required>
           </label>
-          <button type="submit" class="signInButton">Entrar</button>
+          <button type="submit" class="signInButton" form="signInForm">Entrar</button>
         </form>
         <div class="bottomLeftSection" >
           <p>problemas para entrar?</p>
@@ -36,5 +36,6 @@
         <img src="./assets/undraw_interview_rmcf.svg" alt="" class="rightImage">
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
