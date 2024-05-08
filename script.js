@@ -5,7 +5,10 @@ const iconEmail = document.getElementById("imageSignEmail");
 const inputPassword = document.getElementById("signPswd");
 const labelPassword = document.getElementById('labelSignPassword');
 const iconPassword = document.getElementById("imageSignPassword");
-
+let p = document.createElement('p');
+p.textContent = 'Por favor, insira um e-mail válido';
+p.classList.add('pError');
+let parent = labelEmail.parentNode
 
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -16,6 +19,7 @@ formElement.addEventListener("submit", (event) => {
 inputEmail.addEventListener('invalid',() => {
   labelEmail.style.borderColor = '#FF5757';
   iconEmail.style.fill = '#FF5757 !important';
+  parent.insertBefore(p, labelEmail.nextElementSibling);
 })
 
 inputPassword.addEventListener('invalid',() => {

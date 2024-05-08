@@ -56,7 +56,7 @@ main {
 
 .formSignUp{
   display: grid;
-  gap: 15px;
+  gap: 10px;
 }
 .labelInput{
   border: 2px solid var(--gray);
@@ -107,6 +107,13 @@ main {
 
 .rightImage{
   /* max-width: 800px; */
+}
+
+.pError{
+  color: #fff;
+  font-size: 14px;
+  padding-left: 10px;
+  margin: 0;
 }
 
 @media only screen and (max-width: 768px) {
